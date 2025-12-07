@@ -123,7 +123,6 @@ cd <Predictive-Analysis-On-Bank-Deposits>
 python regression_project.py
 
 
-Generated plots and results will be saved in the regression_graphs folder.
 
 ## Model Outputs
 
