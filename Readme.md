@@ -126,17 +126,27 @@ python regression_project.py
 
 ## Model Outputs
 
+### Linear Regression
+
 ![linear](https://github.com/user-attachments/assets/d8581d67-1dd8-4130-aff2-6938b642d2f3)
 
+
+### Random Forest
 
 ![Random ](https://github.com/user-attachments/assets/29ede652-5171-42ff-8aee-1805159cc622)
 
 
+### Decision Tree
+
 ![decision](https://github.com/user-attachments/assets/c1bbfdbb-92f2-4a33-8921-2071cb163ceb)
 
 
+### KNN Regressor
+
 ![regressor](https://github.com/user-attachments/assets/d2ec5974-a928-42d9-9bf3-c8021c8c1578)
 
+
+### Best Model Accuracy
 
 ![model beat](https://github.com/user-attachments/assets/03666949-88a7-4f6c-b254-e1c40504bd08)
 
