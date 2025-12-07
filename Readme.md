@@ -115,7 +115,7 @@ git clone <https://github.com/PARAS-RAJPUT/Predictive-Analysis-On-Bank-Deposits>
 
 ### Navigate to the project folder:
 
-cd <Predictive-Analysis-On-Bank-Deposits>
+cd < Predictive-Analysis-On-Bank-Deposits>
 
 
 ### Run the main Python script:
