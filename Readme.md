@@ -127,13 +127,25 @@ Generated plots and results will be saved in the regression_graphs folder.
 
 ## Model Outputs
 
-CSV file with metrics of all models: regression_graphs/final_model_comparison.csv
+![linear](https://github.com/user-attachments/assets/d8581d67-1dd8-4130-aff2-6938b642d2f3)
 
-Scatter plots: regression_graphs/{Model_Name}.png
 
-Correlation heatmap: regression_graphs/correlation_heatmap_seaborn.png
+![Random ](https://github.com/user-attachments/assets/29ede652-5171-42ff-8aee-1805159cc622)
 
-R² Comparison chart: regression_graphs/final_comparison_r2.png
+
+![decision](https://github.com/user-attachments/assets/c1bbfdbb-92f2-4a33-8921-2071cb163ceb)
+
+
+![regressor](https://github.com/user-attachments/assets/d2ec5974-a928-42d9-9bf3-c8021c8c1578)
+
+
+![model beat](https://github.com/user-attachments/assets/03666949-88a7-4f6c-b254-e1c40504bd08)
+
+
+
+
+
+
 
 ## Conclusion
 
