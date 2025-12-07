@@ -17,7 +17,7 @@ Hyperparameter tuning using GridSearchCV.
 
 Scalable SVR implementation with StandardScaler.
 
-Dataset
+## Dataset
 
 ### File: populationgroup-wise-deposits.csv
 
@@ -29,11 +29,11 @@ no_of_accounts – Number of accounts in the population group.
 
 deposit_amount – Total deposits in the population group.
 
-Requirements
+### Requirements
 
 Python 3.x
 
-Packages: pandas, numpy, matplotlib, seaborn, scikit-learn
+### Packages: pandas, numpy, matplotlib, seaborn, scikit-learn
 
 ## Install dependencies:
 
