@@ -38,18 +38,18 @@ Python 3.x
 ## Install dependencies:
 
 pip install pandas numpy matplotlib seaborn scikit-learn
+regression-deposits-project/
+├── 📄 populationgroup-wise-deposits.csv   # Dataset containing banking data
+├── 🐍 regression_project.py               # Main Python script with model code
+├── 📁 regression_graphs/                  # Folder to save generated plots and charts
+│   ├── correlation_heatmap_seaborn.png
+│   ├── Linear_Regression.png
+│   ├── Random_Forest.png
+│   ├── SVR.png
+│   └── final_comparison_r2.png
+├── 📄 final_model_comparison.csv          # CSV file storing metrics (R², MAE, MSE) for all models
+└── 📄 README.md                           # Project documentation
 
-#### regression-deposits-project/
-#### ├── populationgroup-wise-deposits.csv   # Dataset containing banking data
-#### ├── regression_project.py               # Main Python script with model code
-#### ├── regression_graphs/                  # Folder to save generated plots and charts
-#### │   ├── correlation_heatmap_seaborn.png
-#### │   ├── Linear_Regression.png
-#### │   ├── Random_Forest.png
-#### │   ├── SVR.png
-#### │   └── final_comparison_r2.png
-#### ├── final_model_comparison.csv          # CSV file storing metrics (R², MAE, MSE) for all models
-#### └── README.md                           # Project documentation
 
 
 ## Methodology
