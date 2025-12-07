@@ -110,12 +110,12 @@ Bar chart comparing R² scores across models.
 
 ### Clone the repository:
 
-git clone <repository_url>
+git clone <https://github.com/PARAS-RAJPUT/Predictive-Analysis-On-Bank-Deposits>
 
 
 ### Navigate to the project folder:
 
-cd <repository_name>
+cd <Predictive-Analysis-On-Bank-Deposits>
 
 
 ### Run the main Python script:
