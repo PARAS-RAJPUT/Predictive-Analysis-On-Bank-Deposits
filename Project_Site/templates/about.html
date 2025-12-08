@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% set active = 'about' %}
+{% block content %}
+<div class="glass card p-6">
+    <div class="flex items-center justify-between mb-4">
+        <h2 class="text-3xl font-bold section-title">About the Project</h2>
+        <span class="metric-chip">ML Stack</span>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 text-slate-700 dark:text-slate-200">
+        <div class="space-y-3">
+            <p><strong>Dataset:</strong> Branch-level deposits with demographics, geography (state, district), channel mix, product type, and temporal attributes (year/quarter).</p>
+            <p><strong>Objective:</strong> Predict deposit amounts and group customers into actionable clusters for marketing and branch optimization.</p>
+            <p><strong>Techniques:</strong> Regression (Linear, Polynomial, Random Forest, Gradient Boosting, KNN, SVR, CNN) and K-Means clustering.</p>
+            <p><strong>Evaluation:</strong> R², RMSE, MAE, cross-validation mean score to ensure generalization.</p>
+        </div>
+        <div class="space-y-3">
+            <p><strong>Tools:</strong> Python, Flask, scikit-learn, pandas, matplotlib, seaborn, Chart.js, TailwindCSS.</p>
+            <p><strong>APIs:</strong> <code>/predict</code> for inference, <code>/get_model_results</code> for metrics, <code>/get_clusters</code> for segmentation.</p>
+            <p><strong>CNN Regression:</strong> 1D convolution on temporal features for smoothing seasonality; summary available via API and on results page.</p>
+            <p><strong>Deliverables:</strong> Downloadable reports for model comparison and cluster analysis with ready-to-embed PNG charts.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
