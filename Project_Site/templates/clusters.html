@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% set active = 'clusters' %}
+{% block content %}
+<div class="flex items-center justify-between mb-6">
+    <div>
+        <p class="text-sm text-slate-500 dark:text-slate-300">Unsupervised Learning</p>
+        <h2 class="text-3xl font-bold section-title">Customer Clustering</h2>
+    </div>
+    <div class="flex gap-3">
+        <a href="{{ url_for('download_cluster_report') }}" class="btn btn-gradient px-4 py-2 rounded-full shadow-soft">Download Cluster Report</a>
+    </div>
+</div>
+
+<div class="grid md:grid-cols-2 gap-6">
+    <div class="glass card p-5">
+        <p class="text-sm text-slate-500 dark:text-slate-300 mb-2">Elbow Method</p>
+        <img src="{{ url_for('static', filename='images/elbow.png') }}" class="rounded-xl shadow-soft w-full" alt="Elbow plot">
+    </div>
+    <div class="glass card p-5">
+        <p class="text-sm text-slate-500 dark:text-slate-300 mb-2">K-Means Scatter</p>
+        <img src="{{ url_for('static', filename='images/clusters.png') }}" class="rounded-xl shadow-soft w-full" alt="Cluster scatter">
+    </div>
+</div>
+
+<div class="glass card p-6 mt-8">
+    <div class="grid md:grid-cols-3 gap-4 text-sm text-slate-700 dark:text-slate-200">
+        {% for c in clusters %}
+        <div class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-slate-100 dark:border-slate-700">
+            <p class="text-xs uppercase text-slate-500 dark:text-slate-400">Cluster {{ c.id }}</p>
+            <p class="font-semibold text-lg mb-2">{{ c.name }}</p>
+            <p>{{ c.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="glass card p-6 mt-8">
+    <div class="flex items-center justify-between mb-3">
+        <h3 class="text-xl font-semibold">Cluster Sizes</h3>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-slate-100 dark:border-slate-700">
+            <canvas id="cluster-chart" height="180"></canvas>
+        </div>
+        <div class="text-sm text-slate-700 dark:text-slate-200 space-y-2">
+            <p><strong>Endpoint:</strong> <code>/get_clusters</code> returns cluster labels and summaries.</p>
+            <p>Report export available as CSV/JSON with top drivers per segment.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
