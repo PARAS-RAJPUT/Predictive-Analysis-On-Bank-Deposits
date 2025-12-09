@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% set active = 'insights' %}
+{% block content %}
+<div class="flex items-center justify-between mb-6">
+    <h2 class="text-3xl font-bold section-title">Data Insights</h2>
+    <div class="flex gap-3 text-sm text-slate-500 dark:text-slate-300">
+        <span class="metric-chip">Feature Importance</span>
+        <span class="metric-chip">Correlation</span>
+    </div>
+</div>
+
+<div class="grid md:grid-cols-3 gap-6">
+    <div class="glass card p-5">
+        <p class="text-sm text-slate-500 dark:text-slate-300 mb-2">Correlation Heatmap</p>
+        <img src="{{ url_for('static', filename='images/heatmap.png') }}" class="rounded-xl shadow-soft w-full" alt="Heatmap">
+    </div>
+    <div class="glass card p-5">
+        <p class="text-sm text-slate-500 dark:text-slate-300 mb-2">Distribution</p>
+        <img src="{{ url_for('static', filename='images/distribution.png') }}" class="rounded-xl shadow-soft w-full" alt="Distribution">
+    </div>
+    <div class="glass card p-5">
+        <p class="text-sm text-slate-500 dark:text-slate-300 mb-2">Tree-based Importance</p>
+        <img src="{{ url_for('static', filename='images/pred_vs_actual.png') }}" class="rounded-xl shadow-soft w-full" alt="Importance">
+    </div>
+</div>
+
+<div class="glass card p-6 mt-8">
+    <h3 class="text-xl font-semibold mb-3">Key Takeaways</h3>
+    <ul class="space-y-2 text-slate-700 dark:text-slate-200 list-disc pl-4">
+        <li>High positive correlation between urban population density and deposit volumes.</li>
+        <li>Branch type and tenure drive variance captured by Gradient Boosting.</li>
+        <li>Seasonality features (year/quarter) improve CNN regression stability.</li>
+    </ul>
+</div>
+{% endblock %}
+
