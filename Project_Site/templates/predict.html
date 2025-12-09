@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% set active = 'predict' %}
+{% block content %}
+<div class="grid lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2 glass card p-6">
+        <div class="flex items-center justify-between mb-4">
+            <h2 class="text-2xl font-bold section-title">Predict Deposit</h2>
+            <span class="metric-chip">Live API</span>
+        </div>
+        <form id="predict-form" class="grid md:grid-cols-2 gap-4">
+            {% for field in [
+                ('population_group','Population Group'),
+                ('state','State'),
+                ('district','District'),
+                ('branch_type','Branch Type'),
+                ('year','Year'),
+                ('account_type','Account Type'),
+                ('avg_balance','Average Balance'),
+                ('tenure','Customer Tenure (yrs)')
+            ] %}
+            <div>
+                <label class="block text-sm text-slate-600 dark:text-slate-300 mb-1">{{ field[1] }}</label>
+                <input name="{{ field[0] }}" required class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-300" placeholder="Enter {{ field[1]|lower }}">
+            </div>
+            {% endfor %}
+            <div class="md:col-span-2">
+                <label class="block text-sm text-slate-600 dark:text-slate-300 mb-1">Additional Drivers</label>
+                <textarea name="notes" rows="3" class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-300" placeholder="Optional notes or marketing signals"></textarea>
+            </div>
+            <div class="md:col-span-2 flex items-center gap-3">
+                <button type="submit" class="btn btn-gradient px-5 py-3 rounded-full shadow-soft">Predict</button>
+                <p class="text-sm text-slate-500 dark:text-slate-300">Model: Gradient Boost Regressor (auto-loaded)</p>
+            </div>
+        </form>
+    </div>
+    <div class="glass card p-6 space-y-4">
+        <h3 class="text-xl font-semibold">Prediction Output</h3>
+        <div id="predict-result" class="text-slate-600 dark:text-slate-300">
+            Submit the form to view predicted deposit value, confidence, and interpretation.
+        </div>
+        <div class="p-4 rounded-xl bg-indigo-50 dark:bg-slate-800 text-sm">
+            <p class="font-semibold mb-2">API Endpoint</p>
+            <p><code>/predict</code> returns JSON with predicted_deposit, confidence, model_name.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-emerald-50 dark:bg-slate-800 text-sm">
+            <p class="font-semibold mb-2">Model</p>
+            <p>Loaded from <code>models/model.pkl</code> with feature pre-processing on the server.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
