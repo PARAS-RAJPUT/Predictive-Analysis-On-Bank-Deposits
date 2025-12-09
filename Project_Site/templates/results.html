@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% set active = 'results' %}
+{% block content %}
+<div class="flex items-center justify-between mb-6">
+    <h2 class="text-3xl font-bold section-title">Model Results</h2>
+    <a href="{{ url_for('download_model_report') }}" class="btn btn-gradient px-4 py-2 rounded-full shadow-soft">Download Report</a>
+</div>
+
+<div class="glass card p-6 mb-8">
+    <div class="grid md:grid-cols-2 gap-6">
+        <div>
+            <p class="text-sm text-slate-500 dark:text-slate-300 mb-2">Cross Validation Results</p>
+            <ul class="space-y-2 text-slate-700 dark:text-slate-200">
+                {% for row in cv_results %}
+                <li class="flex items-center justify-between p-3 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-slate-100 dark:border-slate-700">
+                    <span class="font-semibold">{{ row.model }}</span>
+                    <span class="metric-chip">Mean Score: {{ row.cv_mean }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="bg-white/70 dark:bg-slate-900/70 rounded-xl p-4 border border-slate-100 dark:border-slate-700">
+            <p class="text-sm text-slate-500 dark:text-slate-300 mb-2">Animated R² Overview</p>
+            <canvas id="results-chart" height="140"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="grid md:grid-cols-2 gap-6">
+    {% for model in models %}
+    <details class="glass card p-5" open>
+        <summary class="flex items-center justify-between cursor-pointer">
+            <div>
+                <p class="text-sm text-slate-500 dark:text-slate-300">{{ model.type }}</p>
+                <p class="text-xl font-semibold">{{ model.name }}</p>
+            </div>
+            <span class="metric-chip">R² {{ model.r2 }}</span>
+        </summary>
+        <div class="mt-4 space-y-2 text-sm text-slate-700 dark:text-slate-200">
+            <p>RMSE: {{ model.rmse }} • MAE: {{ model.mae }}</p>
+            <p>Cross-val mean: {{ model.cv_mean }}</p>
+            <img src="{{ url_for('static', filename='images/pred_vs_actual.png') }}" class="rounded-lg shadow-soft" alt="Prediction vs Actual">
+        </div>
+    </details>
+    {% endfor %}
+</div>
+
+<div class="glass card p-6 mt-8">
+    <h3 class="text-xl font-semibold mb-3">Final Model Comparison</h3>
+    <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+            <thead>
+                <tr class="text-left text-slate-500 dark:text-slate-300">
+                    <th class="py-2">Model</th>
+                    <th class="py-2">R²</th>
+                    <th class="py-2">RMSE</th>
+                    <th class="py-2">MAE</th>
+                    <th class="py-2">Cross-val mean</th>
+                </tr>
+            </thead>
+            <tbody class="text-slate-800 dark:text-slate-100">
+                {% for row in models %}
+                <tr class="border-t border-slate-100 dark:border-slate-800">
+                    <td class="py-2">{{ row.name }}</td>
+                    <td class="py-2">{{ row.r2 }}</td>
+                    <td class="py-2">{{ row.rmse }}</td>
+                    <td class="py-2">{{ row.mae }}</td>
+                    <td class="py-2">{{ row.cv_mean }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
