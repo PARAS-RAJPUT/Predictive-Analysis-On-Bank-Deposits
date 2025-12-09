@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or "Deposit Amount Prediction & Customer Segmentation" }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body.dark {
+            color: #e5e7eb;
+        }
+        .dark .glass a { color: #e5e7eb; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="sticky top-0 z-30 backdrop-blur bg-white/95 dark:bg-slate-900/70 border-b border-indigo-100 dark:border-slate-800 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-2xl hero-gradient shadow-lg flex items-center justify-center text-white font-bold">ML</div>
+                <div>
+                    <p class="font-semibold text-slate-800 dark:text-white text-sm">Deposit Amount Prediction</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">& Customer Segmentation</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-700 dark:text-slate-200">
+                <a href="{{ url_for('home') }}" class="{% if active=='home' %}nav-link-active{% endif %}">Home</a>
+                <a href="{{ url_for('predict_page') }}" class="{% if active=='predict' %}nav-link-active{% endif %}">Predict Deposit</a>
+                <a href="{{ url_for('results_page') }}" class="{% if active=='results' %}nav-link-active{% endif %}">Model Results</a>
+                <a href="{{ url_for('clusters_page') }}" class="{% if active=='clusters' %}nav-link-active{% endif %}">Clustering</a>
+                <a href="{{ url_for('insights_page') }}" class="{% if active=='insights' %}nav-link-active{% endif %}">Data Insights</a>
+                <a href="{{ url_for('about_page') }}" class="{% if active=='about' %}nav-link-active{% endif %}">About</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="theme-toggle" class="sr-only">
+                    <span class="w-12 h-6 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center px-1 transition">
+                        <span class="dot w-4 h-4 bg-white rounded-full shadow transform transition"></span>
+                    </span>
+                </label>
+                <a href="#contact" class="hidden md:inline-flex items-center btn btn-gradient text-sm font-semibold px-4 py-2 rounded-full shadow-soft">Get in touch</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-10">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="max-w-6xl mx-auto px-4 pb-10 text-slate-500 dark:text-slate-400 text-sm">
+        <div class="border-t border-slate-200 dark:border-slate-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
+            <p>Deposit Amount Prediction & Customer Segmentation • ML Project</p>
+            <div class="flex gap-3">
+                <a class="hover:text-slate-800 dark:hover:text-white" href="{{ url_for('about_page') }}">About</a>
+                <a class="hover:text-slate-800 dark:hover:text-white" href="{{ url_for('insights_page') }}">Insights</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+
