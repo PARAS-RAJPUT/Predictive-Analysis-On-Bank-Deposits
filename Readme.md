@@ -36,7 +36,7 @@ Python 3.x
 ### Packages: pandas, numpy, matplotlib, seaborn, scikit-learn
 
 ## Install dependencies:
-
+```
 regression-deposits-project/
 │
 ├── 📄 populationgroup-wise-deposits.csv
@@ -50,7 +50,7 @@ regression-deposits-project/
 │
 ├── 📄 final_model_comparison.csv
 └── 📄 README.md
-
+```
 
 ## Methodology
 
