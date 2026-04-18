@@ -107,21 +107,19 @@ Actual vs Predicted scatter plots for each model.
 Bar chart comparing R² scores across models.
 
 ## How to Run
+```
+# Clone the repository
+git clone https://github.com/PARAS-RAJPUT/Predictive-Analysis-On-Bank-Deposits
 
-### Clone the repository:
+# Navigate to project folder
+cd Predictive-Analysis-On-Bank-Deposits
 
-git clone <https://github.com/PARAS-RAJPUT/Predictive-Analysis-On-Bank-Deposits>
+# Install dependencies
+pip install pandas numpy matplotlib seaborn scikit-learn
 
-
-### Navigate to the project folder:
-
-cd <Predictive-Analysis-On-Bank-Deposits>
-
-
-### Run the main Python script:
-
+# Run the project
 python regression_project.py
-
+```
 
 
 ## Model Outputs
