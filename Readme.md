@@ -37,19 +37,19 @@ Python 3.x
 
 ## Install dependencies:
 
-pip install pandas numpy matplotlib seaborn scikit-learn
 regression-deposits-project/
-├── 📄 populationgroup-wise-deposits.csv   # Dataset containing banking data
-├── 🐍 regression_project.py               # Main Python script with model code
-├── 📁 regression_graphs/                  # Folder to save generated plots and charts
+│
+├── 📄 populationgroup-wise-deposits.csv
+├── 🐍 regression_project.py
+├── 📁 regression_graphs/
 │   ├── correlation_heatmap_seaborn.png
 │   ├── Linear_Regression.png
 │   ├── Random_Forest.png
 │   ├── SVR.png
 │   └── final_comparison_r2.png
-├── 📄 final_model_comparison.csv          # CSV file storing metrics (R², MAE, MSE) for all models
-└── 📄 README.md                           # Project documentation
-
+│
+├── 📄 final_model_comparison.csv
+└── 📄 README.md
 
 
 ## Methodology
@@ -163,5 +163,3 @@ Random Forest Regressor performed best in predicting deposit amounts.
 Modular design allows running models separately for efficiency.
 
 Visualizations provide insights into feature importance and model performance.
-
-### Contact : parasrajput987045@gmail.com
