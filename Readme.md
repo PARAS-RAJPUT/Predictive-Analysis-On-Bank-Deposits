@@ -100,14 +100,13 @@ Cross-Validation R²
 
 ## ``Visualization``
 
-```
-Correlation heatmap.
 
-Actual vs Predicted scatter plots for each model.
+``1. Correlation heatmap.``
 
-Bar chart comparing R² scores across models.
+``2. Actual vs Predicted scatter plots for each model.``
 
-```
+``3. Bar chart comparing R² scores across models.``
+
 
 ## ```How to Run```
 ```
