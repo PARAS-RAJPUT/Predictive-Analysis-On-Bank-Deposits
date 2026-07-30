@@ -98,15 +98,18 @@ Mean Squared Error (MSE)
 
 Cross-Validation R²
 
-## Visualization
+## ``Visualization``
 
+```
 Correlation heatmap.
 
 Actual vs Predicted scatter plots for each model.
 
 Bar chart comparing R² scores across models.
 
-## How to Run
+```
+
+## ```How to Run```
 ```
 # Clone the repository
 git clone https://github.com/PARAS-RAJPUT/Predictive-Analysis-On-Bank-Deposits
@@ -154,7 +157,7 @@ python regression_project.py
 
 
 
-## Conclusion
+## ```Conclusion```
 
 Random Forest Regressor performed best in predicting deposit amounts.
 
