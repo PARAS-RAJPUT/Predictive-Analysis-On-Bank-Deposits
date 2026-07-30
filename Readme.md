@@ -3,7 +3,7 @@
 
 This project implements regression models to predict deposit amounts based on banking infrastructure and account data for different population groups. It allows comparison between multiple regression models to identify the best-performing model.
 
-## ``Key Features:``
+## Key Features:
 
 ``- Predict deposit amounts using no_of_offices and no_of_accounts.``
 
@@ -17,11 +17,11 @@ This project implements regression models to predict deposit amounts based on ba
 
 ``- Scalable SVR implementation with StandardScaler.``
 
-## ```Dataset```
+## Dataset
 
-### ``File: populationgroup-wise-deposits.csv``
+### File: populationgroup-wise-deposits.csv
 
-### ``Columns:``
+### Columns:
 
 ``- no_of_offices – Number of bank offices in the population group.``
 
@@ -29,13 +29,13 @@ This project implements regression models to predict deposit amounts based on ba
 
 ``- deposit_amount – Total deposits in the population group. ``
 
-### ``Requirements``
+### Requirements
 
 ``Python 3.x``
 
-### ``Packages: pandas, numpy, matplotlib, seaborn, scikit-learn``
+### Packages: pandas, numpy, matplotlib, seaborn, scikit-learn
 
-## ```Install dependencies:```
+## Install dependencies:
 ```
 regression-deposits-project/
 │
@@ -52,7 +52,7 @@ regression-deposits-project/
 └── 📄 README.md
 ```
 
-## ```Methodology```
+## Methodology
 
 ``1. Data Loading and Preprocessing``
 
@@ -62,13 +62,13 @@ regression-deposits-project/
 
 ``4. Split dataset into training (80%) and testing (20%) sets.``
 
-## ```Exploratory Data Analysis (EDA)```
+## Exploratory Data Analysis (EDA)
 
 `` - Generate correlation heatmap using seaborn.``
 
 `` - Identify strongest predictors for deposit amounts.``
 
-## ```Model Selection```
+## Model Selection
 
 ``1. Linear Regression``
 
@@ -78,9 +78,9 @@ regression-deposits-project/
 
 ``4. Support Vector Regressor (SVR)``
 
-K-Nearest Neighbors (KNN) Regressor
+``5. K-Nearest Neighbors (KNN) Regressor``
 
-## ```Model Training```
+## Model Training
 
 ``1. Each model trained individually.``
 
@@ -88,7 +88,7 @@ K-Nearest Neighbors (KNN) Regressor
 
 ``3. SVR scaled with StandardScaler for faster and accurate predictions.``
 
-## ```Evaluation Metrics```
+## Evaluation Metrics
 
 ``1. R² Score``
 
@@ -98,7 +98,7 @@ K-Nearest Neighbors (KNN) Regressor
 
 ``4. Cross-Validation R²``
 
-## ```Visualization```
+## Visualization
 
 
 ``1. Correlation heatmap.``
@@ -108,7 +108,7 @@ K-Nearest Neighbors (KNN) Regressor
 ``3. Bar chart comparing R² scores across models.``
 
 
-## ```How to Run```
+## How to Run
 ```
 # Clone the repository
 git clone https://github.com/PARAS-RAJPUT/Predictive-Analysis-On-Bank-Deposits
