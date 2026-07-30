@@ -1,5 +1,5 @@
-# ````Predictive Analysis of Population Group-wise Bank Deposits````
-## ```Project Overview````
+# Predictive Analysis of Population Group-wise Bank Deposits
+## Project Overview
 
 This project implements regression models to predict deposit amounts based on banking infrastructure and account data for different population groups. It allows comparison between multiple regression models to identify the best-performing model.
 
