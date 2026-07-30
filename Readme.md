@@ -144,7 +144,7 @@ python regression_project.py
 ![regressor](https://github.com/user-attachments/assets/d2ec5974-a928-42d9-9bf3-c8021c8c1578)
 
 
-### Best Model Accuracy
+### **Best Model Accuracy
 
 ![model beat](https://github.com/user-attachments/assets/03666949-88a7-4f6c-b254-e1c40504bd08)
 
