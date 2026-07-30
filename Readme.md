@@ -1,41 +1,41 @@
-# Predictive Analysis of Population Group-wise Bank Deposits
-## Project Overview
+# ````Predictive Analysis of Population Group-wise Bank Deposits````
+## ```Project Overview````
 
 This project implements regression models to predict deposit amounts based on banking infrastructure and account data for different population groups. It allows comparison between multiple regression models to identify the best-performing model.
 
-## Key Features:
+## ``Key Features:``
 
-Predict deposit amounts using no_of_offices and no_of_accounts.
+``- Predict deposit amounts using no_of_offices and no_of_accounts.``
 
-Compare multiple regression models: Linear Regression, Decision Tree, Random Forest, SVR, KNN.
+``- Compare multiple regression models: Linear Regression, Decision Tree, Random Forest, SVR, KNN.``
 
-Modular code to run models individually to avoid heavy computation.
+``- Modular code to run models individually to avoid heavy computation.``
 
-Includes correlation heatmaps, scatter plots, and R² comparison charts.
+``- Includes correlation heatmaps, scatter plots, and R² comparison charts.``
 
-Hyperparameter tuning using GridSearchCV.
+``- Hyperparameter tuning using GridSearchCV.``
 
-Scalable SVR implementation with StandardScaler.
+``- Scalable SVR implementation with StandardScaler.``
 
-## Dataset
+## ```Dataset```
 
-### File: populationgroup-wise-deposits.csv
+### ``File: populationgroup-wise-deposits.csv``
 
-### Columns:
+### ``Columns:``
 
-no_of_offices – Number of bank offices in the population group.
+``- no_of_offices – Number of bank offices in the population group.``
 
-no_of_accounts – Number of accounts in the population group.
+``- no_of_accounts – Number of accounts in the population group.``
 
-deposit_amount – Total deposits in the population group.
+``- deposit_amount – Total deposits in the population group. ``
 
-### Requirements
+### ``Requirements``
 
-Python 3.x
+``Python 3.x``
 
-### Packages: pandas, numpy, matplotlib, seaborn, scikit-learn
+### ``Packages: pandas, numpy, matplotlib, seaborn, scikit-learn``
 
-## Install dependencies:
+## ```Install dependencies:```
 ```
 regression-deposits-project/
 │
@@ -52,53 +52,53 @@ regression-deposits-project/
 └── 📄 README.md
 ```
 
-## Methodology
+## ```Methodology```
 
-Data Loading and Preprocessing
+``1. Data Loading and Preprocessing``
 
-Load dataset using pandas.
+``2. Load dataset using pandas.``
 
-Handle missing values and select numeric features.
+``3. Handle missing values and select numeric features.``
 
-Split dataset into training (80%) and testing (20%) sets.
+``4. Split dataset into training (80%) and testing (20%) sets.``
 
-## Exploratory Data Analysis (EDA)
+## ```Exploratory Data Analysis (EDA)```
 
-Generate correlation heatmap using seaborn.
+`` - Generate correlation heatmap using seaborn.``
 
-Identify strongest predictors for deposit amounts.
+`` - Identify strongest predictors for deposit amounts.``
 
-## Model Selection
+## ```Model Selection```
 
-Linear Regression
+``1. Linear Regression``
 
-Decision Tree Regressor
+``2. Decision Tree Regressor``
 
-Random Forest Regressor
+``3. Random Forest Regressor``
 
-Support Vector Regressor (SVR)
+``4. Support Vector Regressor (SVR)``
 
 K-Nearest Neighbors (KNN) Regressor
 
-## Model Training
+## ```Model Training```
 
-Each model trained individually.
+``1. Each model trained individually.``
 
-Hyperparameter tuning with GridSearchCV.
+``2. Hyperparameter tuning with GridSearchCV.``
 
-SVR scaled with StandardScaler for faster and accurate predictions.
+``3. SVR scaled with StandardScaler for faster and accurate predictions.``
 
-## Evaluation Metrics
+## ```Evaluation Metrics```
 
-R² Score
+``1. R² Score``
 
-Mean Absolute Error (MAE)
+``2. Mean Absolute Error (MAE)``
 
-Mean Squared Error (MSE)
+``3. Mean Squared Error (MSE)``
 
-Cross-Validation R²
+``4. Cross-Validation R²``
 
-## ``Visualization``
+## ```Visualization```
 
 
 ``1. Correlation heatmap.``
